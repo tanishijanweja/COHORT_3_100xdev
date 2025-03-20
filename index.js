@@ -1,83 +1,110 @@
-const express = require("express");
-const jwt = require("jsonwebtoken");
-const JWT_SECRET = "randomtanishi";
-const app = express();
-app.use(express.json());
+// function sum(a, b){
+//     let totalSum = a+b;
+//     return totalSum
+// }
+// let sum1 =sum(1,2);
+// let sum2 =sum(9,1);
 
-const users = [];
+// console.log(sum1);
+// console.log(sum2);
 
-app.post("/signup", function (req, res) {
-  const username = req.body.username;
-  const password = req.body.password;
-  users.push({
-    username: username,
-    password: password,
-  });
-  res.json({
-    message: "You are signed up",
-  });
-  console.log(users);
-});
+// function canVote(age){
+//     if (age >= 18 ){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
 
-app.post("/signin", function (req, res) {
-  const username = req.body.username;
-  const password = req.body.password;
+// let ans = canVote(18);
+// console.log(ans);
+// function canVote(age){
+//     if (age >= 18) {
+//         console.log("You are an adult.");
+//     } else {
+//         console.log("You are a minor.");
+//     }
+// }
 
-  // const foundUser = users.find(function (u) {
-  //   if (u.username == username && u.password == password) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // });
+// canVote(11);
+// function checkEvenOrOdd(number) {
+//     if (number % 2 == 0) {
+//         console.log("Number is even");
+//     } else {
+//         console.log("Number is odd");
+//     }
+// }
+// checkEvenOrOdd(800908);
+// function sum(n) {
+//     if (n < 1) {
+//       return 0;
+//     }else{
+//         return (n * (n + 1)) / 2;
+//     }  
+   
+//   }
+  
+//   const number = 10; 
+//   console.log(`The sum from 1 to ${number} is: ${sum(number)}`);
+// function greet(user){
+//     console.log("Hi " + title + user.name + ", your age is " + user.age + canVote);
+// }
+// let user={
+//     name: "xyz",
+//     age: 2,
+//     gender: "female"
+// }
+// let title;
+// if(user.gender === 'male'){
+//     title= "Mr.";
+// }else if(user.gender === 'female'){
+//     title= "Mrs.";
+// }else{
+//     title= "others";
+// }
+// let canVote;
+// if (user.age>=18){
+//     canVote= ", you are legal to vote";
+// }else{
+//     canVote=", you cannot vote";
+// }
 
-  let foundUser = null;
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].username == username && users[i].password == password) {
-      foundUser = users[i];
-    }
-  }
+// greet(user);
 
-  if (foundUser) {
-    const token = jwt.sign(
-      {
-        username: username,
-      },
-      JWT_SECRET
-    );
-    // foundUser.token = token;
-    res.json({
-      token: token,
-    });
-  } else {
-    res.status(403).send({
-      message: "Invalid username or password",
-    });
-  }
-  console.log(users);
-});
+// function filterEvenNumbers(numbers) {
+//     return numbers.filter((num) => num % 2 === 0);
+//   }
+//   const inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//   const evenNumbers = filterEvenNumbers(inputArray);
+//   console.log(evenNumbers); 
 
-app.get("/me", function (req, res) {
-  const token = req.headers.token;
-  const decodedInformation = jwt.verify(token, JWT_SECRET);
-  const username = decodedInformation.username;
-  let foundUser = null;
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].username == username) {
-      foundUser = users[i];
-    }
-  }
+// function xyz(users) {
+//     const pqr= [];
+//     for(let i=0; i<users.length; i++){
+//         if(users[i].age>=18 && users[i].gender ==='male'){
+//             pqr.push(users[i]);
+//         }
+//     }
+//     return pqr;
 
-  if (foundUser) {
-    res.json({
-      username: foundUser.username,
-      password: foundUser.password,
-    });
-  } else {
-    res.json({
-      message: "token invalid",
-    });
-  }
-});
+// }  
+// const users =[{
+//     name: "Tanishi",
+//     age: 18,
+//     gender: "female"
+// },{
+//     name: "Harkirat",
+//     age: 12,
+//     gender: "male"
+// },{
+//     name: "Raj",
+//     age: 29,
+//     gender: "male"
+// },{
+//     name: "Sam",
+//     age: 18,
+//     gender: "male"
+// }];
 
-app.listen(3000);
+// const pqr=xyz(users);
+// console.log(pqr);
