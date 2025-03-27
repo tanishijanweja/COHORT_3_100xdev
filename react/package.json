@@ -1,4 +1,30 @@
 {
+<<<<<<< HEAD
+  "name": "cohort-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanishijanweja/COHORT_3_100xdev.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanishijanweja/COHORT_3_100xdev/issues"
+  },
+  "homepage": "https://github.com/tanishijanweja/COHORT_3_100xdev#readme",
+  "description": "cohort",
+  "keywords": [
+    "cohort"
+  ]
+=======
   "name": "react",
   "private": true,
   "version": "0.0.0",
@@ -24,4 +50,5 @@
     "globals": "^15.15.0",
     "vite": "^6.2.0"
   }
+>>>>>>> 6720e48 (Initial commit)
 }
