@@ -1,18 +1,15 @@
-function App() {
+import React from "react";
+const App = () => {
   return (
     <div>
-      <Card innerContent={"hi there"} />
-      <Card innerContent={<div style={{color: "green"}}>hello there</div>} />
+      <MyComponent />
     </div>
   );
-}
+};
 
-function Card({ innerContent }) {
+function MyComponent() {
   return (
-    <div style={{ background: "black", borderRadius: 10, color: "white", padding: 10, margin: 10 }}>
-      {innerContent}
-    </div>
+    <div style={{ backgroundColor: "pink", color: "white", padding: 10, borderRadius: 18 }}>Hello, World!</div>
   );
 }
-
 export default App;
