@@ -3,7 +3,7 @@ import { Otp } from "./components/Otp";
 
 function App() {
   return (
-    <div className="h-screen bg-[#002b5b]">
+    <div className="h-screen bg-[#092c59]">
       <br />
       <br />
       <br />

@@ -3,7 +3,7 @@ export const Button = ({ disabled, children, onClick }) => {
     <span
       onClick={onClick}
       className={`rounded-2xl text-4xl px-32 py-8 text-white cursor-pointer ${
-        disabled ? "bg-[#8094ad]" : "bg-[#36c6c0]"
+        disabled ? "bg-[#7487a0]" : "bg-[##3fc0bc]"
       }`}
     >
       {children}

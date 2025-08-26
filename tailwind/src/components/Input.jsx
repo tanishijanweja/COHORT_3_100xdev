@@ -7,7 +7,7 @@ export const Input = ({ onClick, type, placeholder }) => {
       <input
         type={type}
         placeholder={placeholder}
-        className="bg-[#19406a] outline-none "
+        className="bg-[#092c59] outline-none "
       ></input>
     </span>
   );
